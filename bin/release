@@ -8,9 +8,11 @@ else
     DEPLOY_DIR="/app/"
 fi
 
+
+
 cat <<EOF
 ---
 default_process_types:
-    web: /app/dart-sdk/bin/dart pub global run dhttpd --port $PORT --path ${DEPLOY_DIR}
+    web: /app/dart-sdk/bin/dart pub global run dhttpd --port \$PORT --path ${DEPLOY_DIR}
 
 EOF
